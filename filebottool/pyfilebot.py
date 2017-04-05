@@ -25,7 +25,7 @@ if not FILEBOT_EXE:
                  os.environ['HOME']+'/bin/filebot/filebot',
                  os.environ['HOME']+'/filebot',
                  os.environ['HOME']+'/filebot/filebot',
-                 os.environ['HOME']+'bin/filebot.sh',
+                 os.environ['HOME']+'/bin/filebot.sh',
                  os.environ['HOME']+'/bin/filebot/filebot.sh',
                  os.environ['HOME']+'/filebot.sh',
                  os.environ['HOME']+'/filebot/filebot.sh',]
