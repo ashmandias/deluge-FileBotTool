@@ -18,10 +18,18 @@ from distutils import spawn
 
 FILEBOT_EXE = spawn.find_executable('filebot')
 if not FILEBOT_EXE:
-    locations = [
-        r'C:\Program Files\FileBot\filebot.exe', r'/usr/bin/filebot',
-        r'/usr/local/bin/filebot'
-    ]
+    locations = [r'C:\Program Files\FileBot\filebot.exe',
+                 r'/usr/bin/filebot',
+                 r'/usr/local/bin/filebot',
+                 os.environ['HOME']+'bin/filebot',
+                 os.environ['HOME']+'/bin/filebot/filebot',
+                 os.environ['HOME']+'/filebot',
+                 os.environ['HOME']+'/filebot/filebot',
+                 os.environ['HOME']+'bin/filebot.sh',
+                 os.environ['HOME']+'/bin/filebot/filebot.sh',
+                 os.environ['HOME']+'/filebot.sh',
+                 os.environ['HOME']+'/filebot/filebot.sh',]
+
     for loc in locations:
         if os.path.exists(loc):
             FILEBOT_EXE = loc
